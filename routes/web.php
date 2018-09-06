@@ -141,3 +141,28 @@ Route::get('/employeelist', 'PayrollController@employeelist')->name('employeelis
 Route::get('/getpayrolldata', 'PayrollController@getpayrolldata')->name('getpayrolldata');
 Route::get('/getpayrolldetails', 'PayrollController@getpayrolldetails')->name('getpayrolldetails');
 Route::post('/submitpayroll','PayrollController@submitpayroll')->name('submitpayroll');
+
+
+//routes ni kester for saving memos
+Route::get('/creatememo','memorandumcontroller@creatememofunction')->name('creatememo');
+Route::get('/getmemoid','memorandumcontroller@getidfunction')->name('getmemoid');
+Route::get('/getarrayid','memorandumcontroller@getarrayfunction')->name('getarrayid');
+Route::POST('/sendmemo','memorandumcontroller@sendmemofunction')->name('sendmemo');
+
+//Routes for viewing
+
+Route::get('/viewmemo/','memorandumcontroller@viewmemofunction')->name('viewmemo');
+Route::get('/editmemo/{id}','memorandumcontroller@editmemofunction')->name('editmemo');
+Route::get('/getemployeeseditmemo','memorandumcontroller@getemployeesforeditmemofunction')->name('getemployeeseditmemo');
+Route::POST('/updatememo','memorandumcontroller@updatememofunction')->name('updatememo');
+
+
+
+
+
+
+
+
+
+
+

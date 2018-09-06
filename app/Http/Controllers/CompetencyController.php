@@ -158,5 +158,6 @@ class CompetencyController extends Controller
       $emc = DB::table('employee_assessments')->join('competencies', 'competency_id', '=', 'competencies.id')->join('indicators', 'indicator_id','=','indicators.id')->join('assessment_records', 'ar_id','=','assessment_records.id')->select('competencies.name as comp','competencies.competencytype_id', 'indicators.name as ind', 'assessment_records.summary_date', 'assessment_records.created_at')->where('employee_assessments.ar_id', $data['id'])->get();
       return $emc;
     }
+
 }
 

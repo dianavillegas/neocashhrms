@@ -63,6 +63,12 @@ tr.shown td.details-control {
     background: url('{{asset('images/details_close.png')}}') no-repeat center center;
      background-size: 40px 40px;
 }
+
+td.vcenter {
+    vertical-align: middle;
+}
+
+
    </style>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
